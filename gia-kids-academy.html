@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gia Kids Academy — Day Care &amp; Night Care | Hamden, CT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          amber: '#F4B942',
+          sky: '#7EC8E3',
+          mint: '#7FC8A9',
+          coral: '#F0876B',
+          ink: '#3A362E',
+          cream: '#FFFBF3',
+          muted: '#8a8477',
+        },
+        fontFamily: {
+          display: ['Fredoka', 'sans-serif'],
+          body: ['Quicksand', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+<style>
+  html{ scroll-behavior:smooth; }
+  .blob-glow{ background: radial-gradient(ellipse 55% 50% at 30% 20%, rgba(244,185,66,0.18), transparent 70%), radial-gradient(ellipse 45% 40% at 80% 30%, rgba(126,200,227,0.16), transparent 70%); }
+  .card-hover{ transition: transform .25s ease, box-shadow .25s ease; }
+  .card-hover:hover{ transform: translateY(-5px); box-shadow: 0 18px 34px rgba(58,54,46,0.10); }
+  .btn-hover{ transition: transform .15s ease; }
+  .btn-hover:hover{ transform: translateY(-2px) scale(1.02); }
+  #mobileMenu{ transition: max-height .3s ease; overflow:hidden; }
+</style>
+</head>
+<body class="bg-cream text-ink font-body antialiased">
+
+<div class="bg-ink text-cream text-center text-xs font-semibold py-2 px-4">SAMPLE SITE — bracketed text is a placeholder, not confirmed information</div>
+
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-cream/90 backdrop-blur border-b border-ink/10">
+  <nav class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+    <div class="font-display text-xl font-bold text-ink">Gia Kids <span class="text-coral">Academy</span></div>
+    <div class="hidden md:flex gap-8 text-sm font-semibold">
+      <a href="#programs" class="hover:text-coral transition-colors">Programs</a>
+      <a href="#about" class="hover:text-coral transition-colors">About</a>
+      <a href="#languages" class="hover:text-coral transition-colors">Languages</a>
+      <a href="#contact" class="hover:text-coral transition-colors">Contact</a>
+    </div>
+    <a href="tel:4752275747" class="hidden md:inline-block btn-hover bg-coral text-white text-sm font-bold px-6 py-3 rounded-full">Schedule a Tour</a>
+    <button id="menuBtn" class="md:hidden text-2xl text-ink" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+  </nav>
+  <div id="mobileMenu" class="md:hidden max-h-0 px-6">
+    <div class="flex flex-col gap-4 py-5 text-sm font-semibold border-t border-ink/10">
+      <a href="#programs" class="hover:text-coral">Programs</a>
+      <a href="#about" class="hover:text-coral">About</a>
+      <a href="#languages" class="hover:text-coral">Languages</a>
+      <a href="#contact" class="hover:text-coral">Contact</a>
+      <a href="tel:4752275747" class="btn-hover bg-coral text-white text-center font-bold px-6 py-3 rounded-full">Schedule a Tour</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="blob-glow pt-20 pb-20 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <p class="text-sm font-bold uppercase tracking-wide text-coral mb-4">Hamden, CT</p>
+      <h1 class="font-display text-5xl sm:text-6xl font-bold leading-tight mb-4 text-ink">
+        Learn <span class="text-amber">•</span> Play <span class="text-sky">•</span> Grow
+      </h1>
+      <p class="text-muted text-lg max-w-md mb-8">
+        Licensed &amp; insured home childcare offering both day care and night care — in a warm, tri-lingual environment built for creativity and imagination.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="tel:4752275747" class="btn-hover bg-coral text-white font-bold px-8 py-4 rounded-full">Book a Tour</a>
+        <a href="#programs" class="btn-hover border-2 border-ink/20 text-ink font-bold px-8 py-4 rounded-full hover:border-coral hover:text-coral">Our Programs</a>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-3xl p-8 shadow-lg border border-ink/5">
+      <h3 class="font-display text-xl font-bold mb-5 text-ink">Quick Inquiry</h3>
+      <form onsubmit="event.preventDefault(); this.querySelector('.form-note').classList.remove('hidden');" class="space-y-4">
+        <input type="text" required placeholder="Parent's name" class="w-full bg-cream border border-ink/10 rounded-xl px-4 py-3 focus:outline-none focus:border-coral">
+        <input type="text" required placeholder="Phone or email" class="w-full bg-cream border border-ink/10 rounded-xl px-4 py-3 focus:outline-none focus:border-coral">
+        <select class="w-full bg-cream border border-ink/10 rounded-xl px-4 py-3 focus:outline-none focus:border-coral text-muted">
+          <option>Interested in: Day Care</option>
+          <option>Interested in: Night Care</option>
+          <option>Interested in: Both</option>
+        </select>
+        <button type="submit" class="btn-hover w-full bg-amber text-ink font-bold py-4 rounded-full">Request a Tour</button>
+        <p class="form-note hidden text-xs text-muted text-center">This is a static sample — connect this form to a real email service before going live.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="py-20 px-6 border-t border-ink/10 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center max-w-xl mx-auto mb-14">
+      <p class="text-sm font-bold uppercase tracking-wide text-coral mb-3">Why Choose Us</p>
+      <h2 class="font-display text-4xl font-bold text-ink">Peace of Mind, Built In</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="card-hover bg-cream rounded-2xl p-7 text-center border border-ink/5">
+        <i class="fa-solid fa-shield-heart text-3xl text-mint mb-4"></i>
+        <h3 class="font-display font-bold mb-2">Licensed &amp; Insured</h3>
+        <p class="text-sm text-muted">Fully licensed home childcare you can trust.</p>
+      </div>
+      <div class="card-hover bg-cream rounded-2xl p-7 text-center border border-ink/5">
+        <i class="fa-solid fa-moon text-3xl text-sky mb-4"></i>
+        <h3 class="font-display font-bold mb-2">Day &amp; Night Flexibility</h3>
+        <p class="text-sm text-muted">Care that works around real family schedules.</p>
+      </div>
+      <div class="card-hover bg-cream rounded-2xl p-7 text-center border border-ink/5">
+        <i class="fa-solid fa-language text-3xl text-coral mb-4"></i>
+        <h3 class="font-display font-bold mb-2">Tri-Lingual Environment</h3>
+        <p class="text-sm text-muted">English, Español, and Português every day.</p>
+      </div>
+      <div class="card-hover bg-cream rounded-2xl p-7 text-center border border-ink/5">
+        <i class="fa-solid fa-palette text-3xl text-amber mb-4"></i>
+        <h3 class="font-display font-bold mb-2">Play-Based Learning</h3>
+        <p class="text-sm text-muted">Safe, engaging activities built for creativity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs" class="py-20 px-6 border-t border-ink/10">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center max-w-xl mx-auto mb-14">
+      <p class="text-sm font-bold uppercase tracking-wide text-coral mb-3">Programs</p>
+      <h2 class="font-display text-4xl font-bold text-ink">Day Care &amp; Night Care</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="card-hover bg-amber/15 rounded-3xl p-9 border border-amber/30">
+        <i class="fa-solid fa-sun text-3xl text-amber mb-5"></i>
+        <h3 class="font-display text-2xl font-bold mb-3">Day Care</h3>
+        <p class="text-muted">Engaging daily activities and play-based learning designed to spark creativity and imagination — every day is full of discovery.</p>
+      </div>
+      <div class="card-hover bg-sky/15 rounded-3xl p-9 border border-sky/30">
+        <i class="fa-solid fa-star-and-crescent text-3xl text-sky mb-5"></i>
+        <h3 class="font-display text-2xl font-bold mb-3">Night Care</h3>
+        <p class="text-muted">Flexible overnight and evening scheduling in a safe, calm, and quiet environment — built for families who need it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRI-LINGUAL -->
+<section id="languages" class="py-20 px-6 border-t border-ink/10 bg-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="text-sm font-bold uppercase tracking-wide text-coral mb-3">The Tri-Lingual Advantage</p>
+    <h2 class="font-display text-4xl font-bold text-ink mb-6">Three Languages. One Classroom.</h2>
+    <p class="text-muted max-w-2xl mx-auto mb-10">Early language exposure builds stronger communication skills and cultural awareness — every day includes English, Español, and Português.</p>
+    <div class="flex justify-center gap-6 flex-wrap">
+      <div class="bg-cream rounded-2xl px-8 py-6 border border-ink/5"><p class="font-display font-bold text-lg">English</p></div>
+      <div class="bg-cream rounded-2xl px-8 py-6 border border-ink/5"><p class="font-display font-bold text-lg">Español</p></div>
+      <div class="bg-cream rounded-2xl px-8 py-6 border border-ink/5"><p class="font-display font-bold text-lg">Português</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST / TESTIMONIALS -->
+<section class="py-20 px-6 border-t border-ink/10">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center max-w-xl mx-auto mb-14">
+      <p class="text-sm font-bold uppercase tracking-wide text-coral mb-3">Peace of Mind</p>
+      <h2 class="font-display text-4xl font-bold text-ink">Trusted Care</h2>
+      <p class="text-muted mt-3 text-sm">No public reviews were found for this business online — the space below is ready for real parent testimonials once available.</p>
+    </div>
+    <div class="flex justify-center gap-4 flex-wrap mb-14">
+      <div class="bg-mint/15 border border-mint/40 rounded-full px-6 py-3 text-sm font-bold text-ink flex items-center gap-2"><i class="fa-solid fa-certificate text-mint"></i> Licensed</div>
+      <div class="bg-sky/15 border border-sky/40 rounded-full px-6 py-3 text-sm font-bold text-ink flex items-center gap-2"><i class="fa-solid fa-shield text-sky"></i> Insured</div>
+      <div class="bg-coral/15 border border-coral/40 rounded-full px-6 py-3 text-sm font-bold text-ink flex items-center gap-2"><i class="fa-solid fa-kit-medical text-coral"></i> CPR / First Aid Certified</div>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-7 border border-ink/5 border-dashed">
+        <p class="text-sm text-muted italic">[Placeholder — add a real parent testimonial here]</p>
+        <p class="text-xs text-muted mt-5 font-semibold">— Parent name</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 border border-ink/5 border-dashed">
+        <p class="text-sm text-muted italic">[Placeholder — add a real parent testimonial here]</p>
+        <p class="text-xs text-muted mt-5 font-semibold">— Parent name</p>
+      </div>
+      <div class="bg-white rounded-2xl p-7 border border-ink/5 border-dashed">
+        <p class="text-sm text-muted italic">[Placeholder — add a real parent testimonial here]</p>
+        <p class="text-xs text-muted mt-5 font-semibold">— Parent name</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / FOOTER -->
+<footer id="contact" class="bg-ink text-cream py-20 px-6">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-14 mb-14">
+    <div>
+      <h2 class="font-display text-3xl font-bold mb-6">Let's Talk.</h2>
+      <div class="space-y-5 text-sm">
+        <div class="flex items-start gap-4">
+          <i class="fa-solid fa-location-dot text-amber mt-1"></i>
+          <p>Westerfield Rd, Hamden, CT</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <i class="fa-solid fa-phone text-amber mt-1"></i>
+          <a href="tel:4752275747" class="hover:text-amber transition-colors">(475) 227-5747</a>
+        </div>
+        <div class="flex items-start gap-4">
+          <i class="fa-solid fa-envelope text-amber mt-1"></i>
+          <a href="mailto:giakidsacademydaycare@gmail.com" class="hover:text-amber transition-colors break-all">giakidsacademydaycare@gmail.com</a>
+        </div>
+        <div class="flex items-start gap-4">
+          <i class="fa-solid fa-clock text-amber mt-1"></i>
+          <p>[Confirm real operating hours — day &amp; night care schedules]</p>
+        </div>
+        <div class="flex items-start gap-4">
+          <i class="fa-solid fa-language text-amber mt-1"></i>
+          <p>Multi-language support: English, Español, Português</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-cream/5 rounded-3xl p-8 border border-cream/10">
+      <h3 class="font-display text-xl font-bold mb-5">Send an Inquiry</h3>
+      <form onsubmit="event.preventDefault(); this.querySelector('.form-note').classList.remove('hidden');" class="space-y-4">
+        <input type="text" required placeholder="Parent's name" class="w-full bg-cream/10 border border-cream/20 rounded-xl px-4 py-3 text-cream placeholder-cream/50 focus:outline-none focus:border-amber">
+        <input type="email" required placeholder="Email" class="w-full bg-cream/10 border border-cream/20 rounded-xl px-4 py-3 text-cream placeholder-cream/50 focus:outline-none focus:border-amber">
+        <textarea rows="3" placeholder="Tell us about your childcare needs..." class="w-full bg-cream/10 border border-cream/20 rounded-xl px-4 py-3 text-cream placeholder-cream/50 focus:outline-none focus:border-amber"></textarea>
+        <button type="submit" class="btn-hover w-full bg-amber text-ink font-bold py-4 rounded-full">Send Inquiry</button>
+        <p class="form-note hidden text-xs text-cream/60 text-center">This is a static sample — connect this form to a real email service before going live.</p>
+      </form>
+    </div>
+  </div>
+  <div class="max-w-5xl mx-auto pt-8 border-t border-cream/10 flex flex-wrap justify-between gap-2 text-xs text-cream/60">
+    <span>© 2026 Gia Kids Academy Day Care and Night Care</span>
+    <span>Sample site — some content is placeholder</span>
+  </div>
+</footer>
+
+<script>
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+  var menuOpen = false;
+  menuBtn.addEventListener('click', function(){
+    menuOpen = !menuOpen;
+    mobileMenu.style.maxHeight = menuOpen ? mobileMenu.scrollHeight + 'px' : '0px';
+    menuBtn.innerHTML = menuOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+  });
+  document.querySelectorAll('#mobileMenu a').forEach(function(link){
+    link.addEventListener('click', function(){
+      menuOpen = false;
+      mobileMenu.style.maxHeight = '0px';
+      menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    });
+  });
+</script>
+
+</body>
+</html>
